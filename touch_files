@@ -1,0 +1,47 @@
+#!/bin/bash
+
+#### Constants
+
+FILENAME1="filetest1"
+FILENAME2="filetest2"
+FILENAME3="filetest3"
+FILENAME4="filetest4"
+FILENAME5="filetest5"
+FILENAME6="filename6"
+FILENAME7="filename7"
+FILENAME8="filename8"
+FILENAME9="filename9"
+FILENAME10="filename10"
+FILENAME11="filename11"
+FILENAME12="filename12"
+FILENAME13="filename13"
+FILENAME14="filename14"
+FILENAME15="filename15"
+FILENAME16="filename16"
+
+#### Functions
+
+touch_files() 
+{ 
+touch $FILENAME1 $FILENAME2 $FILENAME3
+}
+
+echo_shebang()
+{
+for i in *
+do
+echo "#!/bin/bash" >> $i
+done
+}
+
+permission_mission()
+{
+chmod u+x *
+}
+
+#### MAIN
+
+$(touch_files)
+$(echo_shebang)
+$(permission_mission)
+#!/bin/bash
